@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Language" content="en" />
+    <title>RevoFun - Gaming</title>
+
+    <!-- SEO & Page Identity -->
+    <meta name="description" content="RevoFun Gaming offers a variety of simple and exciting JavaScript-based games, including Number Guessing, Rock Paper Scissors, Clicker Game, and more, playable directly in your browser." />
+    <meta name="keywords" content="RevoFun Gaming, landing page, game, web game, simple games, casual games, JavaScript based games, no download games, instant play games" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="RevoFun Gaming" />
+    <meta name="copyright" content="© 2025 RevoFun Gaming. All rights reserved" />
+
+    <!-- Open Graph Meta Tags (Social Media Optimization: Facebook, Linkedin, WhatsApp) -->
+    <meta property="og:title" content="RevoFun Gaming | Play Simple & Fun JavaScript Games Online" />
+    <meta property="og:description" content="Enjoy exciting browser-based games such as Number Guessing, Rock Paper Scissors, Clicker Game, and more at RevoFun Gaming. No downloads required!" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="RevoFun Gaming" />
+    <meta property="og:author" content="RevoFun Gaming" />
+
+    <!-- Twitter Card Meta Tags (Optimized for Twitter/X) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="RevoFun Gaming | Play Exciting JavaScript Games Online" />
+    <meta name="twitter:description" content="Play fun and simple browser-based games like Number Guessing, Rock Paper Scissors, Clicker Game and more instantly on RevoFun Gaming!" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:site" content="@RevoFunGaming" />
+
+    <!-- Canonical URL (Avoiding Duplicate Content) -->
+    <link rel="canonical" href="#" />
+
+    <!-- Link Pavicon -->
+    <link rel="shortcut icon" href="/public/pavicon.png" type="image/x-icon" />
+
+    <!-- link Goolge Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
+
+    <!-- Link Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+      :root {
+        /* Color */
+        --color-primary: #ff4757;
+        --color-secondary: #2ed573;
+        --color-text: #ffffff;
+        --color-text-variant: #cccccc;
+        --color-surface-variant: #0f0f0f;
+        --color-background: #121212;
+
+        /* Font Family */
+        --font-family-heading: "Bebas Neue", sans-serif;
+        --font-family-base: "Source Sans 3", sans-serif;
+
+        /* Letter Spacing */
+        --letter-spacing-xs: 0.1rem;
+        --letter-spacing-sm: 0.2rem;
+
+        /* Box Shadow */
+        --shadow-xs: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+
+  <body class="bg-(--color-background) font-(family-name:--font-family-base) tracking-(--letter-spacing-xs) text-(--color-text)">
+    <header id="header" class="sticky top-0 z-100 flex items-center justify-between bg-(--color-surface) px-[3rem] py-[1.5rem] shadow-(--shadow-sm)"></header>
+
+    <main>
+      <section id="home">
+        <div id="home__container" class="flex h-[90vh] flex-col items-center justify-center bg-(--color-surface-variant) px-[1.5rem]">
+          <h2 class="mb-[1rem] text-center font-(family-name:--font-family-heading) text-6xl font-bold tracking-(--letter-spacing-sm) drop-shadow-(--shadow-xs)">Welcome to <span class="text-(--color-primary)">RevoFun</span></h2>
+          <p class="mb-[2rem] text-center text-2xl">Your destination for simple yet addictive browser games!</p>
+        </div>
+      </section>
+
+      <section id="games" class="px-[1.5rem] py-[3rem]">
+        <div class="relative mb-[3rem] flex items-center justify-center after:absolute after:-bottom-[0.5rem] after:h-[3px] after:w-[8rem] after:rounded-full after:bg-(--color-primary) after:content-['']"><h3 class="font-(family-name:--font-family-heading) text-4xl font-bold tracking-(--letter-spacing-sm)">Featured Games</h3></div>
+        <div id="games__container" class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-[1.5rem]"></div>
+      </section>
+
+      <section id="about" class="bg-(--color-surface) px-[1.5rem] py-[3rem] sm:px-[5rem] lg:px-[10rem]">
+        <div class="relative mb-[3rem] flex items-center justify-center after:absolute after:-bottom-2.5 after:h-[3px] after:w-[8rem] after:rounded-full after:bg-(--color-secondary) after:content-['']"><h3 class="font-(family-name:--font-family-heading) text-4xl font-bold tracking-(--letter-spacing-sm)">About RevoFun</h3></div>
+        <p class="mb-[1rem] text-center text-lg text-(--color-text-variant)">RevoFun is a cutting-edge gaming company dedicated to bringing fun and engaging browser-based games to casual gamers worldwide. Our mission is to create simple yet addictive games that anyone can enjoy, anytime, anywhere.</p>
+        <p class="text-center text-lg text-(--color-text-variant)">Founded in 2023, we're passionate about creating memorable gaming experiences that bring joy to players of all ages.</p>
+      </section>
+    </main>
+
+    <footer id="footer" class="flex flex-col gap-[1.5rem] bg-(--color-surface-variant) px-[1.5rem] py-[3rem] sm:flex-row sm:justify-between">
+      <div id="footer__logo" class="flex flex-col gap-[1rem]">
+        <p class="order-1 text-(--color-text-variant)">Simple games, maximum fun!</p>
+      </div>
+
+      <div id="footer__nav">
+        <h4 class="mb-[1rem] font-(family-name:--font-family-heading) text-3xl">Quick Links</h4>
+      </div>
+
+      <div id="footer__social-media">
+        <h3 class="mb-[1rem] font-(family-name:--font-family-heading) text-3xl">Connect With Us</h3>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
