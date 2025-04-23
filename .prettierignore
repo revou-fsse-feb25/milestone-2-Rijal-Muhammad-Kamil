@@ -6,6 +6,7 @@ node_modules/
 public/
 src/components
 src/layout
+src/page
 .gitignore
 .prettierrc
 index.html

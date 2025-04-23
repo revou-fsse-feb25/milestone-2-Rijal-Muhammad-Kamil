@@ -9,11 +9,11 @@ export function renderFooter() {
 
   const logoH1 = {
     text: "Revo",
-    className: "font-[Bebas_Neue] text-3xl font-bold tracking-[0.2rem] text-[#ff4757] drop-shadow-[2px_2px_5px_rgba(0,0,0,5)]"
+    className: "font-[Bebas_Neue] text-3xl font-bold tracking-[0.2rem] text-[#ff4757] drop-shadow-[2px_2px_5px_rgba(0,0,0,5)]",
   };
   const logoSpan = {
     text: "Fun",
-    className: "text-[#2ed573]"
+    className: "text-[#2ed573]",
   };
   const logoComponent = createLogoComponent({ h1: logoH1, span: logoSpan });
 

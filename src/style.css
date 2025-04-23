@@ -1,1 +1,84 @@
 @import "tailwindcss";
+:root {
+  /* Color */
+  --color-primary: #ff4757;
+  --color-secondary: #2ed573;
+  --color-text: #ffffff;
+  --color-text-variant: #cccccc;
+  --color-surface: #1a1a1a;
+  --color-surface-variant-1: #0f0f0f;
+  --color-surface-variant-2: #252525;
+  --color-outline: #333333;
+  --color-guess-low: #1e90ff;
+  --color-guess-high: #ff6b6b;
+  --color-guess-correct: #2ed573;
+  --color-warning: #ffa502;
+  --color-background: #121212;
+
+  /* Font Family */
+  --font-family-heading: "Bebas Neue", sans-serif;
+  --font-family-base: "Source Sans 3", sans-serif;
+
+  /* Letter Spacing */
+  --letter-spacing-xs: 0.1rem;
+  --letter-spacing-sm: 0.2rem;
+
+  /* Box Shadow */
+  --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.3);
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.5);
+  --shadow-xs: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Animations for the Number Guessing Game */
+
+/* Bounce animation for elements */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 0.3s ease-in-out;
+}
+
+/* Pop-in animation for guess history circles */
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.number-circle {
+  animation: popIn 0.3s ease-in-out forwards;
+}
+
+/* Pulse animation for feedback */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  animation: pulse 1s infinite;
+}

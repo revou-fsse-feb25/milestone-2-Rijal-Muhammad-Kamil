@@ -8,7 +8,7 @@ export function renderSectionGames() {
     description: "Test your intuition by guessing the secret number!",
   };
   const card1Link = {
-    href: "#",
+    href: "/src/page/number-guess.html",
     label: "Play",
   };
   const card1Class = {

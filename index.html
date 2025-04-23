@@ -44,68 +44,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Link CSS -->
-     <link rel="stylesheet" href="/src/style.css">
-
-    <style>
-      :root {
-        /* Color */
-        --color-primary: #ff4757;
-        --color-secondary: #2ed573;
-        --color-text: #ffffff;
-        --color-text-variant: #cccccc;
-        --color-surface: #1a1a1a;
-        --color-surface-variant: #0f0f0f;
-        --color-background: #121212;
-
-        /* Font Family */
-        --font-family-heading: "Bebas Neue", sans-serif;
-        --font-family-base: "Source Sans 3", sans-serif;
-
-        /* Letter Spacing */
-        --letter-spacing-xs: 0.1rem;
-        --letter-spacing-sm: 0.2rem;
-
-        /* Box Shadow */
-        --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.5);
-        --shadow-xs: 2px 2px 5px rgba(0, 0, 0, 0.5);
-      }
-    </style>
+    <link rel="stylesheet" href="/src/style.css" />
   </head>
 
   <body class="bg-(--color-background) font-(family-name:--font-family-base) tracking-(--letter-spacing-xs) text-(--color-text)">
-    <header id="header" class="sticky top-0 z-100 flex items-center justify-between bg-(--color-surface) px-[3rem] py-[1.5rem] shadow-(--shadow-sm)"></header>
-
+    <header id="header" class="flex justify-between items-center sticky top-0 z-100 bg-(--color-surface) shadow-(--shadow-sm) px-[3rem] py-[1.5rem] transition-all duration-300 ease-in-out"></header>
     <main>
       <section id="home">
-        <div id="home__container" class="flex h-[90vh] flex-col items-center justify-center bg-(--color-surface-variant) px-[1.5rem]">
-          <h2 class="mb-[1rem] text-center font-(family-name:--font-family-heading) text-6xl font-bold tracking-(--letter-spacing-sm) drop-shadow-(--shadow-xs)">Welcome to <span class="text-(--color-primary)">RevoFun</span></h2>
-          <p class="mb-[2rem] text-center text-2xl">Your destination for simple yet addictive browser games!</p>
+        <div id="home__container" class="h-[90vh] flex flex-col justify-center items-center bg-(--color-surface-variant-1) px-[1.5rem]">
+          <h2 class="font-(family-name:--font-family-heading) font-bold tracking-(--letter-spacing-sm)mb-[1rem] text-center drop-shadow-(--shadow-xs) text-6xl">Welcome to <span class="text-(--color-primary)">RevoFun</span></h2>
+          <p class="text-2xl text-center mb-[2rem]">Your destination for simple yet addictive browser games!</p>
         </div>
       </section>
 
       <section id="games" class="px-[1.5rem] py-[3rem]">
-        <div class="relative mb-[3rem] flex items-center justify-center after:absolute after:-bottom-[0.5rem] after:h-[3px] after:w-[8rem] after:rounded-full after:bg-(--color-primary) after:content-['']"><h3 class="font-(family-name:--font-family-heading) text-4xl font-bold tracking-(--letter-spacing-sm)">Featured Games</h3></div>
+        <div class="flex items-center justify-center relative mb-[3rem] after:content-[''] after:h-[3px] after:w-[8rem] after:absolute after:-bottom-[0.5rem] after:rounded-full after:bg-(--color-primary)"><h3 class="font-(family-name:--font-family-heading) text-4xl font-bold tracking-(--letter-spacing-sm)">Featured Games</h3></div>
         <div id="games__container" class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-[1.5rem]"></div>
       </section>
 
-      <section id="about" class="bg-(--color-surface) px-[1.5rem] py-[3rem] sm:px-[5rem] lg:px-[10rem]">
-        <div class="relative mb-[3rem] flex items-center justify-center after:absolute after:-bottom-2.5 after:h-[3px] after:w-[8rem] after:rounded-full after:bg-(--color-secondary) after:content-['']"><h3 class="font-(family-name:--font-family-heading) text-4xl font-bold tracking-(--letter-spacing-sm)">About RevoFun</h3></div>
-        <p class="mb-[1rem] text-center text-lg text-(--color-text-variant)">RevoFun is a cutting-edge gaming company dedicated to bringing fun and engaging browser-based games to casual gamers worldwide. Our mission is to create simple yet addictive games that anyone can enjoy, anytime, anywhere.</p>
-        <p class="text-center text-lg text-(--color-text-variant)">Founded in 2023, we're passionate about creating memorable gaming experiences that bring joy to players of all ages.</p>
+      <section id="about" class="bg-(--color-surface) px-[1.5rem] sm:px-[5rem] lg:px-[10rem] py-[3rem]">
+        <div class="flex items-center justify-center relative mb-[3rem] after:content-[''] after:h-[3px] after:w-[8rem] after:absolute after:-bottom-[0.5rem] after:rounded-full after:bg-(--color-primary)"><h3 class="font-(family-name:--font-family-heading) text-4xl font-bold tracking-(--letter-spacing-sm)">About RevoFun</h3></div>
+        <p class="text-lg text-center text-(--color-text-variant) mb-[1rem]">RevoFun is a cutting-edge gaming company dedicated to bringing fun and engaging browser-based games to casual gamers worldwide. Our mission is to create simple yet addictive games that anyone can enjoy, anytime, anywhere.</p>
+        <p class="text-lg text-center text-(--color-text-variant)">Founded in 2023, we're passionate about creating memorable gaming experiences that bring joy to players of all ages.</p>
       </section>
     </main>
 
-    <footer id="footer" class="flex flex-col gap-[1.5rem] bg-(--color-surface-variant) px-[1.5rem] py-[3rem] sm:flex-row sm:justify-between">
+    <footer id="footer" class="flex flex-col sm:flex-row sm:justify-between gap-[1.5rem] bg-(--color-surface-variant-1) px-[1.5rem] py-[3rem]">
       <div id="footer__logo" class="flex flex-col gap-[1rem]">
         <p class="order-1 text-(--color-text-variant)">Simple games, maximum fun!</p>
       </div>
 
       <div id="footer__nav">
-        <h4 class="mb-[1rem] font-(family-name:--font-family-heading) text-3xl">Quick Links</h4>
+        <h4 class="font-(family-name:--font-family-heading) text-3xl mb-[1rem]">Quick Links</h4>
       </div>
 
       <div id="footer__social-media">
-        <h3 class="mb-[1rem] font-(family-name:--font-family-heading) text-3xl">Connect With Us</h3>
+        <h4 class="font-(family-name:--font-family-heading) text-3xl mb-[1rem]">Connect With Us</h4>
       </div>
     </footer>
 

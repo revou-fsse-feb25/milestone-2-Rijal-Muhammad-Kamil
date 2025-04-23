@@ -7,6 +7,7 @@ export function createNavComponent({
     aClass: ""
   },
 } = {}) {
+
   const navElement = document.createElement("nav");
   navElement.className = classes.navClass;
 
