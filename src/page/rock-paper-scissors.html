@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Language" content="en" />
+    <title>RevoFun Gaming - Rock paper scissors</title>
+
+    <!-- SEO & Identitas Halaman -->
+    <meta name="description" content="RevoFun Gaming offers a variety of simple and exciting JavaScript-based games, including Number Guessing, Rock Paper Scissors, Clicker Game, and more, playable directly in your browser." />
+    <meta name="keywords" content="RevoFun Gaming, landing page, game, web game, simple games, casual games, JavaScript based games, no download games, instant play games" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="RevoFun Gaming" />
+    <meta name="copyright" content="© 2025 RevoFun Gaming. All rights reserved" />
+
+    <!-- Tag Meta Open Graph (Optimasi Media Sosial: Facebook, Linkedin, WhatsApp) -->
+    <meta property="og:title" content="RevoFun Gaming | Play Simple & Fun JavaScript Games Online" />
+    <meta property="og:description" content="Enjoy exciting browser-based games such as Number Guessing, Rock Paper Scissors, Clicker Game, and more at RevoFun Gaming. No downloads required!" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="RevoFun Gaming" />
+    <meta property="og:author" content="RevoFun Gaming" />
+
+    <!-- Tag Meta Twitter Card (Dioptimalkan untuk Twitter/X) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="RevoFun Gaming | Play Exciting JavaScript Games Online" />
+    <meta name="twitter:description" content="Play fun and simple browser-based games like Number Guessing, Rock Paper Scissors, Clicker Game and more instantly on RevoFun Gaming!" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:site" content="@RevoFunGaming" />
+
+    <!-- URL Kanonik (Menghindari Konten Duplikat) -->
+    <link rel="canonical" href="#" />
+
+    <!-- Tautan Favicon -->
+    <link rel="shortcut icon" href="/public/pavicon.png" type="image/x-icon" />
+
+    <!-- tautan Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
+
+    <!-- Tautan Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tautan CSS -->
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+
+  <body class="font-(family-name:--font-family-base) tracking-(--letter-spacing-xs) text-(--color-text) bg-(--color-background)">
+    <header id="header" class="flex justify-between items-center sticky top-0 z-100 bg-(--color-surface) shadow-(--shadow-sm) px-[3rem] py-[1.5rem] transition-all duration-300 ease-in-out"></header>
+
+    <main class="flex justify-center items-center">
+      <div id="game-container" class="max-w-2xl flex flex-col gap-[2rem] rounded-xl bg-(--color-surface) shadow-(--shadow-md) p-[2rem] mx-[2rem] my-[4rem]">
+        <section id="game-title">
+          <h2 class="font-(family-name:--font-family-heading) text-4xl font-bold text-center tracking-(sm) text-(--color-primary) mb-[1rem]">Rock Paper Scissors</h2>
+          <p class="text-lg text-center">The classic game of chance and strategy!</p>
+        </section>
+
+        <section id="game-instruction" class="rounded-lg bg-(--color-surface-variant-2) p-[1.5rem]">
+          <h3 class="font-(family-name:--font-family-heading) text-2xl font-bold tracking-(sm) text-(--color-secondary) mb-[0.5rem]">How to Play:</h3>
+          <ul class="mb-[2rem] ml-[2rem]">
+            <li class="list-disc mb-[0.2rem]">Choose one of the three options: Rock, Paper, or Scissors</li>
+            <li class="list-disc mb-[0.2rem]">The computer will randomly select its choice.</li>
+            <li class="list-disc mb-[0.2rem]">Rock beats Scissors, Scissors beats Paper, Paper beats Rock.</li>
+            <li class="list-disc mb-[0.2rem]">The first player to reach 5 points wins the game!</li>
+          </ul>
+        </section>
+
+        <section id="rock-paper-scissors" class="flex flex-col justify-center items-center rounded-lg bg-(--color-surface-variant-2) p-[1.5rem]">
+          <h4 id="rock-paper-scissors__status" class="font-(family-name:--font-family-heading) text-xl font-bold text-center tracking-(--letter-spacing-sm) mb-[1rem]"></h4>
+          <p id="rock-paper-scissors__move-left" class="mb-[1.5rem]">Moves Left: <span id="move-left__moves" class="text-(--color-primary)">5</span></p>
+
+          <div id="rock-paper-scissors__rps-option" class="flex justify-between items-center gap-[1rem] mb-[2rem]">
+            <div id="rps-option__rock"></div>
+            <div id="rps-option__paper"></div>
+            <div id="rps-option__scissors"></div>
+          </div>
+
+          <div id="rock-paper-scissors__rps-choise" class="flex justify-between items-center gap-[1rem] mb-[2rem]">
+            <div id="rps-choise__choise-display">
+              <p class="text-center mb-[1rem]">You</p>
+              <div id="choise-display__your-choise"></div>
+            </div>
+            <div id="rps-choise__choise-display">
+              <p class="text-center mb-[1rem]">Computer</p>
+              <div id="choise-display__computer-choise"></div>
+            </div>
+          </div>
+
+          <h4 id="rock-paper-scissors__message" class="font-(family-name:--font-family-heading) text-xl font-bold text-center tracking-(--letter-spacing-sm) mb-[2rem]"></h4>
+
+          <div id="rock-paper-scissors__score-display" class="flex justify-between items-center gap-[1.5rem]">
+            <div id="score-display__score-item" class="text-xl rounded-sm bg-(--color-background) px-5 py-2.5">You: <span id="score-item__player-score">0</span></div>
+            <div id="score-display__score-item" class="text-xl rounded-sm bg-(--color-background) px-5 py-2.5">Computer: <span id="score-item__computer-score">0</span></div>
+          </div>
+        </section>
+
+        <div id="game-back-button" class="flex flex-wrap justify-center items-center"></div>
+      </div>
+    </main>
+
+    <footer id="footer" class="flex flex-col sm:flex-row sm:justify-between gap-[1.5rem] bg-(--color-surface-variant-1) px-[1.5rem] py-[3rem]">
+      <div id="footer__logo" class="flex flex-col gap-[1rem]">
+        <p class="order-1 text-(--color-text-variant)">Simple games, maximum fun!</p>
+      </div>
+
+      <div id="footer__nav">
+        <h5 class="font-(family-name:--font-family-heading) text-3xl mb-[1rem]">Quick Links</h5>
+      </div>
+
+      <div id="footer__social-media">
+        <h5 class="font-(family-name:--font-family-heading) text-3xl mb-[1rem]">Connect With Us</h5>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -4,12 +4,10 @@ coverage
 
 node_modules/
 public/
-src/components
-<!-- src/layout -->
-<!-- src/page -->
+src/
 .gitignore
 .prettierrc
-<!-- index.html -->
+index.html
 package-lock.json
 package.json
 postcss.config.mjs

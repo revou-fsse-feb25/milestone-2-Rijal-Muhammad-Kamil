@@ -1,9 +1,7 @@
 import { createButtonComponent } from "/src/components/my-button";
-import { createLinkButtonComponent } from "/src/components/my-link-button";
 
 export function renderClicker() {
   const clickerArea = document.getElementById("clicker__clicker-area");
-  const gameBackButton = document.getElementById("game-back-button");
 
   const ButtonContent = {
     label: "CLICK ME!",

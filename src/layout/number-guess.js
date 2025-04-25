@@ -24,7 +24,6 @@ export function renderNumberGuess() {
   if (guessing) {
     guessing.appendChild(buttonComponent);
   }
-
   if (gameBackButton) {
     gameBackButton.appendChild(linkButtonComponent);
   }

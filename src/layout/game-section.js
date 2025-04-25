@@ -25,7 +25,7 @@ export function renderSectionGames() {
     description: "The classic game of chance and strategy!",
   };
   const card2Link = {
-    href: "#",
+    href: "/src/page/rock-paper-scissors.html",
     label: "Play",
   };
   const card2Class = {

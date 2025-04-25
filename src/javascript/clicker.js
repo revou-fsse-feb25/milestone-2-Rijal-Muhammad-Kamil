@@ -153,8 +153,3 @@ export default class ClickerGame {
     }, 300);
   }
 }
-
-// Saat halaman sudah dimuat, buat instance baru dari ClickerGame
-document.addEventListener("DOMContentLoaded", () => {
-  new ClickerGame();
-});
