@@ -8,7 +8,7 @@ export function renderNumberGuess() {
   const ButtonContent = {
     label: "Guess",
     iClass: "",
-    buttonClass: "font-[Source Sans 3] tracking-[0.1rem] text-xl text-[#ffffff] rounded-md border-[none] bg-[#ff4757] cursor-pointer px-[1rem] py-[0.5rem] transition-all duration-300 ease-in-out hover:bg-[#e0404e] hover:shadow-[0_2px_8px_rgba(0,0,0,0.3)] hover:-translate-y-0.5",
+    buttonClass: "font-[Source Sans 3] text-xl font-semibold tracking-[0.1rem] text-[#ffffff] rounded-md border-[none] bg-[#ff4757] cursor-pointer px-[1rem] py-[0.5rem] transition-all duration-300 ease-in-out hover:bg-[#e0404e] hover:shadow-[0_2px_8px_rgba(0,0,0,0.3)] hover:-translate-y-0.5",
   };
   const buttonComponent = createButtonComponent(ButtonContent);
   buttonComponent.id = "guessing-button";
@@ -17,7 +17,7 @@ export function renderNumberGuess() {
     href: "/index.html#home",
     label: "Back To Home",
     iClass: "",
-    aClass: "inline-block font-semibold text-[#ffffff] bg-[#333333] rounded-md px-[1rem] py-[0.8rem] transition-all duration-300 ease-in-out hover:bg-[#444444]",
+    aClass: "font-[Source Sans 3] font-semibold tracking-[0.1rem] text-[#ffffff] bg-[#333333] rounded-md px-[1rem] py-[0.8rem] transition-all duration-300 ease-in-out hover:bg-[#444444]",
   };
   const linkButtonComponent = createLinkButtonComponent(linkButtonContent);
 

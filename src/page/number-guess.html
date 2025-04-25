@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Language" content="en" />
-    <title>RevoFun Gaming</title>
+    <title>RevoFun Gaming - Number-Guess</title>
 
-    <!-- SEO & Page Identity -->
+    <!-- SEO & Identitas Halaman -->
     <meta name="description" content="RevoFun Gaming offers a variety of simple and exciting JavaScript-based games, including Number Guessing, Rock Paper Scissors, Clicker Game, and more, playable directly in your browser." />
     <meta name="keywords" content="RevoFun Gaming, landing page, game, web game, simple games, casual games, JavaScript based games, no download games, instant play games" />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="RevoFun Gaming" />
     <meta name="copyright" content="© 2025 RevoFun Gaming. All rights reserved" />
 
-    <!-- Open Graph Meta Tags (Social Media Optimization: Facebook, Linkedin, WhatsApp) -->
+    <!-- Tag Meta Open Graph (Optimasi Media Sosial: Facebook, Linkedin, WhatsApp) -->
     <meta property="og:title" content="RevoFun Gaming | Play Simple & Fun JavaScript Games Online" />
     <meta property="og:description" content="Enjoy exciting browser-based games such as Number Guessing, Rock Paper Scissors, Clicker Game, and more at RevoFun Gaming. No downloads required!" />
     <meta property="og:image" content="" />
@@ -22,28 +22,28 @@
     <meta property="og:site_name" content="RevoFun Gaming" />
     <meta property="og:author" content="RevoFun Gaming" />
 
-    <!-- Twitter Card Meta Tags (Optimized for Twitter/X) -->
+    <!-- Tag Meta Twitter Card (Dioptimalkan untuk Twitter/X) -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="RevoFun Gaming | Play Exciting JavaScript Games Online" />
     <meta name="twitter:description" content="Play fun and simple browser-based games like Number Guessing, Rock Paper Scissors, Clicker Game and more instantly on RevoFun Gaming!" />
     <meta name="twitter:image" content="" />
     <meta name="twitter:site" content="@RevoFunGaming" />
 
-    <!-- Canonical URL (Avoiding Duplicate Content) -->
+    <!-- URL Kanonik (Menghindari Konten Duplikat) -->
     <link rel="canonical" href="#" />
 
-    <!-- Link Pavicon -->
+    <!-- Tautan Favicon -->
     <link rel="shortcut icon" href="/public/pavicon.png" type="image/x-icon" />
 
-    <!-- link Goolge Font -->
+    <!-- tautan Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
 
-    <!-- Link Font Awesome -->
+    <!-- Tautan Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Link CSS -->
+    <!-- Tautan CSS -->
     <link rel="stylesheet" href="/src/style.css" />
   </head>
 
@@ -53,8 +53,8 @@
     <main class="flex justify-center items-center">
       <div id="game-container" class="max-w-2xl flex flex-col gap-[2rem] rounded-xl bg-(--color-surface) shadow-(--shadow-md) p-[2rem] mx-[2rem] my-[4rem]">
         <section id="game-title">
-          <h2 class="font-(family-name:--font-family-heading) text-4xl font-bold tracking-(sm) text-center text-(--color-primary) mb-[1rem]">Number Guessing Game</h2>
-          <p class="text-center">Test your intuition by guessing the secret number!</p>
+          <h2 class="font-(family-name:--font-family-heading) text-4xl font-bold text-center tracking-(sm) text-(--color-primary) mb-[1rem]">Number Guessing Game</h2>
+          <p class="text-lg text-center">Test your intuition by guessing the secret number!</p>
         </section>
 
         <section id="game-instruction" class="rounded-lg bg-(--color-surface-variant-2) p-[1.5rem]">
@@ -65,7 +65,7 @@
             <li class="list-disc mb-[0.2rem]">After each guess, you'll get a hint: "Too high" or "Too low".</li>
             <li class="list-disc mb-[0.2rem]">The fewer attempts you use, the higher your score!</li>
           </ul>
-          <div class="flex justify-center items-center gap-[2rem]">
+          <div class="flex flex-wrap justify-center items-center gap-[2rem]">
             <div class="flex justify-center items-center gap-[0.5rem]">
               <div class="w-[1rem] h-[1rem] rounded-full bg-(--color-guess-low)"></div>
               <span>Too Low</span>
@@ -82,17 +82,17 @@
         </section>
 
         <section id="number-guess" class="flex flex-col justify-center items-center rounded-lg bg-(--color-surface-variant-2) p-[1.5rem]">
-          <p id="number-guess__status" class="text-xl font-semibold text-center mb-[1rem]"></p>
-          <p id="number-guess__attempt-left" class="text-center mb-[1rem]">Attempts left: <span id="attempt-left__attempts" class="text-[--color-primary]">5</span></p>
+          <h4 id="number-guess__status" class="font-(family-name:--font-family-heading) text-xl font-bold text-center tracking-(--letter-spacing-sm) mb-[1rem]"></h4>
+          <p id="number-guess__attempt-left" class="mb-[1rem]">Attempts left: <span id="attempt-left__attempts" class="text-[--color-primary]">5</span></p>
 
           <div id="number-guess__guessing" class="flex justify-center items-center gap-[1rem] mt-[1rem] mb-[2rem]">
-            <input type="number" id="guessing_input" class="text-xl border-[2px] border-solid border-(--color-outline) outline-transparent rounded-md bg-(--color-surface-variant-1) px-[1rem] py-[0.5rem] focus:outline-[2px] focus:outline-(--color-secondary) focus:outline-solid focus:scale-105" min="1" max="100" placeholder="Your guess" />
+            <input type="number" id="guessing_input" class="text-xl border-[2px] border-solid border-(--color-outline) outline-transparent rounded-md bg-(--color-surface-variant-1) px-[1rem] py-[0.5rem] focus:outline-[2px] focus:outline-solid focus:outline-(--color-secondary) focus:scale-105" min="1" max="100" placeholder="Your guess" />
           </div>
 
-          <div id="number-guess__messsage" class="text-xl font-semibold text-center mb-[2rem]"></div>
+          <h4 id="number-guess__message" class="font-(family-name:--font-family-heading) text-xl font-bold text-center tracking-(--letter-spacing-sm) mb-[2rem]"></h4>
+          <p id="history__title" class="mb-[1rem]">Your guesses:</p>
 
           <div id="number-guess__history">
-            <p id="history__title" class="text-center mb-[1rem]">Your guesses:</p>
             <div id="history__container" class="flex flex-wrap justify-center items-center gap-[1rem]"></div>
           </div>
         </section>
@@ -107,11 +107,11 @@
       </div>
 
       <div id="footer__nav">
-        <h4 class="font-(family-name:--font-family-heading) text-3xl mb-[1rem]">Quick Links</h4>
+        <h5 class="font-(family-name:--font-family-heading) text-3xl mb-[1rem]">Quick Links</h5>
       </div>
 
       <div id="footer__social-media">
-        <h4 class="font-(family-name:--font-family-heading) text-3xl mb-[1rem]">Connect With Us</h4>
+        <h5 class="font-(family-name:--font-family-heading) text-3xl mb-[1rem]">Connect With Us</h5>
       </div>
     </footer>
 

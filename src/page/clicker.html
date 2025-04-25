@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Language" content="en" />
-    <title>RevoFun Gaming</title>
+    <title>RevoFun Gaming - Clicker</title>
 
     <!-- SEO & Identitas Halaman -->
     <meta name="description" content="RevoFun Gaming offers a variety of simple and exciting JavaScript-based games, including Number Guessing, Rock Paper Scissors, Clicker Game, and more, playable directly in your browser." />
@@ -49,24 +49,48 @@
 
   <body class="font-(family-name:--font-family-base) tracking-(--letter-spacing-xs) text-(--color-text) bg-(--color-background)">
     <header id="header" class="flex justify-between items-center sticky top-0 z-100 bg-(--color-surface) shadow-(--shadow-sm) px-[3rem] py-[1.5rem] transition-all duration-300 ease-in-out"></header>
-    <main>
-      <section id="home">
-        <div id="home__container" class="h-[90vh] flex flex-col justify-center items-center bg-(--color-surface-variant-1) px-[1.5rem]">
-          <h2 class="font-(family-name:--font-family-heading) text-6xl font-bold text-center tracking-(--letter-spacing-sm) drop-shadow-(--shadow-xs) mb-[1rem]">Welcome to <span class="text-(--color-primary)">RevoFun</span></h2>
-          <p class="text-2xl text-center mb-[2rem]">Your destination for simple yet addictive browser games!</p>
-        </div>
-      </section>
 
-      <section id="games" class="px-[1.5rem] py-[3rem]">
-        <div class="flex justify-center items-center relative mb-[3rem] after:content-[''] after:h-[3px] after:w-[8rem] after:absolute after:-bottom-[0.5rem] after:rounded-full after:bg-(--color-primary)"><h3 class="font-(family-name:--font-family-heading) text-4xl font-bold text-center tracking-(--letter-spacing-sm)">Featured Games</h3></div>
-        <div id="games__container" class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-[1.5rem]"></div>
-      </section>
+    <main class="flex justify-center items-center">
+      <div id="game-container" class="max-w-2xl flex flex-col gap-[2rem] rounded-xl bg-(--color-surface) shadow-(--shadow-md) p-[2rem] mx-[2rem] my-[4rem]">
+        <section id="game-title">
+          <h2 class="font-(family-name:--font-family-heading) text-4xl font-bold tracking-(sm) text-center text-(--color-primary) mb-[1rem]">Clicker Game</h2>
+          <p class="text-lg text-center">How fast can you click? Test your speed!</p>
+        </section>
 
-      <section id="about" class="bg-(--color-surface) px-[1.5rem] sm:px-[5rem] lg:px-[10rem] py-[3rem]">
-        <div class="flex justify-center items-center relative mb-[3rem] after:content-[''] after:h-[3px] after:w-[8rem] after:absolute after:-bottom-[0.5rem] after:rounded-full after:bg-(--color-primary)"><h3 class="font-(family-name:--font-family-heading) text-4xl font-bold text-center tracking-(--letter-spacing-sm)">About RevoFun</h3></div>
-        <p class="text-lg text-center text-(--color-text-variant) mb-[1rem]">RevoFun is a cutting-edge gaming company dedicated to bringing fun and engaging browser-based games to casual gamers worldwide. Our mission is to create simple yet addictive games that anyone can enjoy, anytime, anywhere.</p>
-        <p class="text-lg text-center text-(--color-text-variant)">Founded in 2023, we're passionate about creating memorable gaming experiences that bring joy to players of all ages.</p>
-      </section>
+        <section id="game-instruction" class="rounded-lg bg-(--color-surface-variant-2) p-[1.5rem]">
+          <h3 class="font-(family-name:--font-family-heading) text-2xl font-bold tracking-(sm) text-(--color-secondary) mb-[0.5rem]">How to Play:</h3>
+          <ul class="ml-[2rem]">
+            <li class="list-disc mb-[0.2rem]">Click the big button as many times as you can within the time limit.</li>
+            <li class="list-disc mb-[0.2rem]">The game lasts for 30 seconds.</li>
+            <li class="list-disc mb-[0.2rem]">Your score is the total number of clicks.</li>
+            <li class="list-disc mb-[0.2rem]">The game also tracks your clicks per second (CPS)!.</li>
+            <li class="list-disc mb-[0.2rem]">Try to beat your personal best!.</li>
+          </ul>
+        </section>
+
+        <section id="clicker" class="flex flex-col justify-center items-center rounded-lg bg-(--color-surface-variant-2) p-[1.5rem]">
+          <p id="clicker__status" class="font-(family-name:--font-family-heading) text-xl font-bold text-center tracking-(--letter-spacing-sm) mb-[1rem]">Test your might</p>
+          <p id="clicker__time-left" class="mb-[1rem]">Time remaining: <span id="time-left__time" class="text-[--color-primary]">60</span></p>
+
+          <div id="clicker__clicker-area" class="mt-[1rem] mb-[2rem]"></div>
+
+          <p id="clicker__message" class="font-(family-name:--font-family-heading) text-xl font-bold text-center tracking-(--letter-spacing-sm) mb-[1rem]"></p>
+          <p id="clicker__title" class="mb-[1rem]">Your Stat:</p>
+
+          <div id="clicker_stat" class="flex flex-wrap justify-center items-center gap-[1rem]">
+            <div>
+              <p class="text-lg font-semibold text-(--color-text-variant) mb-[0.2rem]">Clicks</p>
+              <p id="clicker-stat__clicker-count" class="text-2xl font-semibold text-center text-[#ff4757]">0</p>
+            </div>
+            <div>
+              <p class="text-lg font-semibold text-(--color-text-variant) mb-[0.2rem]">Clicks Per Second</p>
+              <p id="clicker-stat__clicker-per-second" class="text-2xl font-semibold text-center text-[#ff4757]">0.0</p>
+            </div>
+          </div>
+        </section>
+
+        <div id="game-back-button" class="flex flex-wrap justify-center items-center"></div>
+      </div>
     </main>
 
     <footer id="footer" class="flex flex-col sm:flex-row sm:justify-between gap-[1.5rem] bg-(--color-surface-variant-1) px-[1.5rem] py-[3rem]">
@@ -75,11 +99,11 @@
       </div>
 
       <div id="footer__nav">
-        <h5 class="font-(family-name:--font-family-heading) text-3xl mb-[1rem]">Quick Links</h5>
+        <h4 class="font-(family-name:--font-family-heading) text-3xl mb-[1rem]">Quick Links</h4>
       </div>
 
       <div id="footer__social-media">
-        <h5 class="font-(family-name:--font-family-heading) text-3xl mb-[1rem]">Connect With Us</h5>
+        <h4 class="font-(family-name:--font-family-heading) text-3xl mb-[1rem]">Connect With Us</h4>
       </div>
     </footer>
 

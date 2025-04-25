@@ -9,7 +9,7 @@ export function renderFooter() {
 
   const logoH1 = {
     text: "Revo",
-    className: "font-[Bebas_Neue] text-3xl font-bold tracking-[0.2rem] text-[#ff4757] drop-shadow-[2px_2px_5px_rgba(0,0,0,5)]",
+    className: "font-[Bebas_Neue] text-3xl tracking-[0.1rem] text-[#ff4757] drop-shadow-[2px_2px_5px_rgba(0,0,0,5)]",
   };
   const logoSpan = {
     text: "Fun",
@@ -39,7 +39,7 @@ export function renderFooter() {
   const socialClass = {
     ulClass: "flex justify-evenly items-center",
     liClass: "w-[2.5rem] h-[2.5rem] flex justify-center items-center rounded-full bg-[#1a1a1a] transition-all duration-300 ease-in-out hover:bg-[#ff4757] hover:translate-y-[-5px]",
-    aClass: "flex justify-center items-center",
+    aClass: "flex justify-center items-center text-[#cccccc]",
   };
   const socialLinkComponent = createSocialLinksComponent({ links: socialLinks, classes: socialClass });
 
